@@ -42,7 +42,7 @@ export type Experience = {
 export const personalInfo: PersonalInfo = {
   name: "Nishadul Haque",
   role: "Full Stack Developer",
-  tagline: "Building Scalable Web Experiences — Frontend to Database",
+  tagline: "Building Scalable Web Experiences - Frontend to Database",
   location: "Rajbari, Dhaka, Bangladesh",
   email: "nishadisl4m@gmail.com",
   githubUrl: "https://github.com/nish4d",
@@ -112,7 +112,7 @@ export const experiences: Experience[] = [
     company: "Clipping Next",
     role: "Full-Stack Developer",
     location: "Adabor, Dhaka, Bangladesh",
-    dateRange: "February 2025 — Present",
+    dateRange: "February 2025 - Present",
     bullets: [
       "Built scalable RESTful APIs and real-time applications using Node.js, Express.js, and Socket.io.",
       "Integrated Stripe payment gateway and implemented JWT authentication for secure transactions.",
@@ -133,7 +133,7 @@ export const experiences: Experience[] = [
     company: "Wedgefort",
     role: "Frontend Developer",
     location: "Mirpur DOHS, Dhaka, Bangladesh",
-    dateRange: "January 2023 — June 2024",
+    dateRange: "January 2023 - June 2024",
     bullets: [
       "Delivered 10+ client projects using React.js and Next.js with responsive design.",
       "Integrated RESTful APIs and implemented state management using Redux Toolkit.",

@@ -22,19 +22,19 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nishadul Haque — Full Stack Developer",
-    template: "%s — Nishadul Haque",
+    default: "Nishadul Haque - Full Stack Developer",
+    template: "%s - Nishadul Haque",
   },
   description:
-    "Building scalable web experiences — frontend to database. Next.js, React, Express.js, MongoDB.",
+    "Building scalable web experiences - frontend to database. Next.js, React, Express.js, MongoDB.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
   metadataBase: new URL("https://example.com"),
   openGraph: {
-    title: "Nishadul Haque — Full Stack Developer",
+    title: "Nishadul Haque - Full Stack Developer",
     description:
-      "Building scalable web experiences — frontend to database. Next.js, React, Express.js, MongoDB.",
+      "Building scalable web experiences - frontend to database. Next.js, React, Express.js, MongoDB.",
     url: "/",
     siteName: "Nishadul Haque",
     locale: "en_US",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nishadul Haque — Full Stack Developer",
+    title: "Nishadul Haque - Full Stack Developer",
     description:
-      "Building scalable web experiences — frontend to database. Next.js, React, Express.js, MongoDB.",
+      "Building scalable web experiences - frontend to database. Next.js, React, Express.js, MongoDB.",
   },
 };
 

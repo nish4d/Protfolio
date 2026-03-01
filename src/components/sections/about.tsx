@@ -97,7 +97,7 @@ export function About() {
             </h2>
             <p className="mt-5 text-base leading-7 text-muted">
               I&apos;m {personalInfo.name}, a full stack developer focused on building
-              scalable web experiences — from interface to API to database. I care about
+              scalable web experiences - from interface to API to database. I care about
               performance, clarity, and engineering decisions that hold up over time.
             </p>
             <p className="mt-4 text-base leading-7 text-muted">
@@ -116,7 +116,7 @@ export function About() {
             <FadeIn delay={0.1}>
               <ValueCard
                 title="Clean Code Advocate"
-                desc="Readable, typed, and maintainable code is a feature — not a luxury."
+                desc="Readable, typed, and maintainable code is a feature - not a luxury."
               />
             </FadeIn>
             <FadeIn delay={0.15}>
