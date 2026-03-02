@@ -28,6 +28,7 @@ export type Project = {
   featured?: boolean;
   liveUrl?: string;
   githubUrl?: string;
+  githubBackendUrl?: string;
 };
 
 export type Experience = {
@@ -75,35 +76,36 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    name: "Featured Project",
+    name: "JK Cabinetry CT",
     description:
-      "A production-ready full-stack platform built with Next.js and MongoDB focusing on performance, DX, and clean architecture.",
-    tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind"],
+      "A full-scale e-commerce platform for a Connecticut-based cabinetry business. Features real-time order tracking via Socket.io, Stripe payments, role-based dashboards, and a custom CMS — built for performance and a seamless customer experience.",
+    tags: ["Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "Socket.io", "RTK Query", "Shadcn UI"],
     featured: true,
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/nish4d",
+    liveUrl: "https://jkcabinetryct.com/",
   },
   {
-    name: "Dashboard Suite",
+    name: "Inventory Pro",
     description:
-      "A modern admin dashboard with role-based access, responsive data tables, and rich animations.",
-    tags: ["React", "TypeScript", "Tailwind"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/nish4d",
+      "A production-ready inventory management system with real-time stock tracking, supplier management, and detailed analytics dashboards. Built with a type-safe API layer using Zod and MongoDB.",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Radix UI", "Zod"],
+    liveUrl: "https://inventory-pro-v1.vercel.app/",
+    githubUrl: "https://github.com/nish4d/Inventory-Pro",
   },
   {
-    name: "API Starter",
+    name: "Pro Extractor",
     description:
-      "Express + MongoDB starter with authentication, validation, and scalable middleware patterns.",
-    tags: ["Node", "Express", "MongoDB"],
-    githubUrl: "https://github.com/nish4d",
+      "A Chrome extension that scrapes Google Maps for business leads — extracting names, addresses, phone numbers, emails, and more at scale. Powered by a Playwright-based scraping backend and a sleek React UI.",
+    tags: ["Plasmo", "React", "Playwright", "Express.js"],
+    liveUrl: "https://gmap-landing.vercel.app/",
+    githubUrl: "https://github.com/nish4d/Gmap-frontend",
+    githubBackendUrl: "https://github.com/nish4d/Gmap-backend",
   },
   {
-    name: "UI Component Lab",
+    name: "Sheba Engineering",
     description:
-      "Reusable UI components, motion primitives, and design tokens for rapid product builds.",
-    tags: ["Next.js", "Tailwind", "Framer Motion"],
-    githubUrl: "https://github.com/nish4d",
+      "Corporate website for a Bangladeshi construction and engineering company. Showcases services, completed projects, and company credentials — built for a professional first impression and easy client outreach.",
+    tags: ["Web", "Construction", "Corporate"],
+    liveUrl: "https://shebaengineering.com/",
   },
 ];
 

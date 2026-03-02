@@ -27,9 +27,6 @@ export function Projects() {
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge className="border-accent-primary/30">Featured</Badge>
-                  {featured.tags.map((t) => (
-                    <Badge key={t}>{t}</Badge>
-                  ))}
                 </div>
                 <h3 className="mt-4 font-display text-2xl font-extrabold tracking-tight">
                   {featured.name}
@@ -62,18 +59,73 @@ export function Projects() {
                       </a>
                     </Button>
                   ) : null}
+                  {featured.githubBackendUrl ? (
+                    <Button variant="outline" asChild>
+                      <a
+                        href={featured.githubBackendUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Backend
+                        <Github className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  ) : null}
                 </div>
               </div>
 
               <div className="lg:col-span-5">
                 <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-background/20 p-6">
+                  {/* Glowing gradient background */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 via-transparent to-accent-secondary/10" />
-                  <div className="relative">
-                    <div className="h-40 w-full rounded-2xl border border-border/60 bg-surface/50" />
-                    <div className="mt-4 grid grid-cols-3 gap-2">
-                      <div className="h-10 rounded-xl border border-border/60 bg-surface/40" />
-                      <div className="h-10 rounded-xl border border-border/60 bg-surface/40" />
-                      <div className="h-10 rounded-xl border border-border/60 bg-surface/40" />
+                  <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent-primary/10 blur-3xl" />
+                  <div className="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-accent-secondary/10 blur-2xl" />
+
+                  <div className="relative space-y-5">
+                    {/* Project type badges row */}
+                    <div className="flex flex-wrap gap-2">
+                      {["E-Commerce", "Real-time", "Secure"].map((label) => (
+                        <span
+                          key={label}
+                          className="rounded-full border border-accent-primary/30 bg-accent-primary/10 px-3 py-1 text-xs font-semibold text-accent-primary"
+                        >
+                          {label}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Stats row */}
+                    <div className="grid grid-cols-3 gap-3 text-center">
+                      {[
+                        { value: "Live", label: "Production" },
+                        { value: "Full", label: "Stack" },
+                        { value: "Real‑time", label: "Updates" },
+                      ].map(({ value, label }) => (
+                        <div
+                          key={label}
+                          className="rounded-2xl border border-border/60 bg-surface/40 px-2 py-3"
+                        >
+                          <p className="text-sm font-extrabold text-foreground">{value}</p>
+                          <p className="mt-0.5 text-[10px] text-muted">{label}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Tech-stack pills */}
+                    <div>
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-widest text-muted">
+                        Tech Stack
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {featured.tags.map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-lg border border-border/50 bg-surface/50 px-2.5 py-1 text-xs font-medium text-foreground/80"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -119,6 +171,17 @@ export function Projects() {
                       rel="noreferrer"
                     >
                       GitHub
+                      <Github className="h-4 w-4" />
+                    </a>
+                  ) : null}
+                  {p.githubBackendUrl ? (
+                    <a
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-foreground/90 transition-colors hover:text-foreground"
+                      href={p.githubBackendUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Backend
                       <Github className="h-4 w-4" />
                     </a>
                   ) : null}

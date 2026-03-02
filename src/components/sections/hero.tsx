@@ -25,7 +25,7 @@ export function Hero() {
   const projects = useCountUp({ to: 12, enabled: statsInView });
   const years = useCountUp({ to: 3, enabled: statsInView });
   const tech = useCountUp({ to: 24, enabled: statsInView });
-  const coffee = useCountUp({ to: 999, enabled: statsInView, durationMs: 1200 });
+  const coffee = useCountUp({ to: 6, enabled: statsInView, durationMs: 1200 });
 
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-16">
