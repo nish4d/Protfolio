@@ -40,15 +40,26 @@ export function Contact() {
   const onSubmit = async (values: FormValues) => {
     setLoading(true);
     try {
-      const body = encodeURIComponent(
-        `From: ${values.name} <${values.email}>\n\n${values.message}`,
-      );
-      const subject = encodeURIComponent(values.subject);
-      window.location.href = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
-      toast.success("Opening your email client...");
+      const res = await fetch(`https://formsubmit.co/ajax/${personalInfo.email}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      toast.success("Message sent successfully!");
       form.reset(defaultValues);
     } catch {
-      toast.error("Could not open email client.");
+      toast.error("Something went wrong. Please try again later.");
     } finally {
       setLoading(false);
     }

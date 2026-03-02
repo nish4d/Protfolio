@@ -107,7 +107,7 @@ export function Hero() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open("/cv.pdf", "_blank")}
+                onClick={() => window.open("/nishad-resume.pdf", "_blank")}
               >
                 Download CV
                 <Download className="h-4 w-4" />
